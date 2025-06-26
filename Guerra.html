@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>La Segunda Guerra Mundial</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .battle-card {
+            transition: transform 0.3s;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .battle-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+            margin: 40px 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #007bff;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #007bff;
+            border: 4px solid white;
+        }
+        .leader-card {
+            text-align: center;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .leader-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 3px solid #007bff;
+        }
+        .stat-card {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body bgcolor="#f0f0f0">
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="Index.html">INICIO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="causas.html">CAUSAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="guerra.html">GUERRA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="consecuencias.html">CONSECUENCIAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="unidades.html">UNIDADES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="formulario.html">FORMULARIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Biografia.html">BIOGRAFIA</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar...">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">BUSCAR</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Carrusel de imágenes -->
+    <div class="container mt-3">
+        <div class="row">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="BATALLA DE ALAMEIN.jpg" class="d-block w-100" alt="Batalla de Alamein">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Batalla de Alamein</h5>
+                            <p>Punto de inflexión en la campaña del Norte de África</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="BATALLA DE IWO JIMA.jpg" class="d-block w-100" alt="Batalla de Iwo Jima">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Batalla de Iwo Jima</h5>
+                            <p>Una de las batallas más sangrientas del Pacífico</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="BATALLA DE BERLIN.jpg" class="d-block w-100" alt="Batalla de Berlín">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Batalla de Berlín</h5>
+                            <p>El final del Tercer Reich</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Siguiente</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <center>
+            <h1><font color="#333">La Segunda Guerra Mundial</font></h1>
+            <p class="lead"><font color="#555">El conflicto más devastador de la historia humana (1939-1945)</font></p>
+        </center>
+
+        <!-- Estadísticas destacadas -->
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-number">60+</div>
+                    <div>Millones de muertos</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-number">30+</div>
+                    <div>Países involucrados</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-number">6</div>
+                    <div>Años de duración</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="stat-number">2</div>
+                    <div>Bombas atómicas</div>
+                </div>
+            </div>
+        </div>
+
+        <hr size="2" color="#333" width="80%">
+
+        <!-- Línea de tiempo -->
+        <div class="row">
+            <div class="col-md-12">
+                <center><h2><font color="#333">Cronología de la Guerra</font></h2></center>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>1939: Inicio de la guerra</h4>
+                        <p>Alemania invade Polonia el 1 de septiembre, lo que lleva a Reino Unido y Francia a declarar la guerra.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>1940: Caída de Francia</h4>
+                        <p>Alemania conquista Francia en solo 6 semanas mediante la táctica Blitzkrieg.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>1941: Operación Barbarroja</h4>
+                        <p>Alemania invade la Unión Soviética, rompiendo el pacto de no agresión.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>1941: Pearl Harbor</h4>
+                        <p>Japón ataca la base naval estadounidense, llevando a EE.UU. a la guerra.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>1942-1943: Stalingrado</h4>
+                        <p>Punto de inflexión en el frente oriental, primera gran derrota alemana.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>1944: Día D</h4>
+                        <p>Los aliados desembarcan en Normandía, abriendo el frente occidental.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>1945: Fin de la guerra</h4>
+                        <p>Alemania se rinde en mayo, Japón en agosto tras las bombas atómicas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr size="2" color="#333" width="80%">
+
+        <!-- Líderes destacados -->
+        <center><h2><font color="#333">Líderes Clave</font></h2></center>
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <div class="leader-card">
+                    <img src="HOI4.png"
+                    <h5>Winston Churchill</h5>
+                    <p>Primer Ministro británico</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="leader-card">
+                    <img src="HOI1.png"
+                    <h5>Franklin D. Roosevelt</h5>
+                    <p>Presidente de EE.UU.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="leader-card">
+                    <img src="HOI3.png"
+                    <h5>Joseph Stalin</h5>
+                    <p>Líder soviético</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="leader-card">
+                    <img src="HOI2.png"
+                    <h5>Adolf Hitler</h5>
+                    <p>Führer alemán</p>
+                </div>
+            </div>
+        </div>
+
+        <hr size="2" color="#333" width="80%">
+
+        <!-- Batallas principales -->
+        <center><h2><font color="#333">Principales Batallas</font></h2></center>
+        
+        <!-- Batalla 1 -->
+        <div class="card battle-card">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="POLONIA.JPG" class="card-img" alt="Invasión de Polonia">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="card-title">1939: Invasión de Polonia</h3><a href="https://es.wikipedia.org/wiki/Invasi%C3%B3n_alemana_de_Polonia_de_1939">BLITZKRIEG EL BAUTISMO DE FUEGO DE LA WERHTMACH</a>
+                        <p class="card-text">El 1 de septiembre de 1939, Alemania invadió Polonia utilizando la táctica Blitzkrieg (guerra relámpago), combinando ataques aéreos rápidos con avances de tanques y infantería motorizada. Esto provocó que Reino Unido y Francia declararan la guerra a Alemania el 3 de septiembre, marcando el inicio oficial de la Segunda Guerra Mundial.</p>
+                        <p><strong>Fechas:</strong> 1 de septiembre - 6 de octubre de 1939</p>
+                        <p><strong>Bajas:</strong> Polonia: 66,000 muertos, 133,700 heridos | Alemania: 16,000 muertos, 30,000 heridos</p>
+                        <p><strong>Consecuencias:</strong> División de Polonia entre Alemania y la URSS según el Pacto Ribbentrop-Mólotov.</p>
+                        <div class="alert alert-info">
+                            <strong>Dato curioso:</strong> La caballería polaca cargó contra tanques alemanes, un símbolo de la desesperada resistencia.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Batalla 2 -->
+        <div class="card battle-card">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="BATALLA DE INGLATERRA.JPG" class="card-img" alt="Batalla de Inglaterra">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="card-title">1940: Batalla de Inglaterra</h3><a href="https://es.wikipedia.org/wiki/Batalla_de_Inglaterra">BF-109 VS SPITFIRE</a>
+                        <p class="card-text">Fue la primera gran campaña librada enteramente por fuerzas aéreas. La Luftwaffe alemana intentó destruir la Royal Air Force (RAF) británica para preparar una invasión (Operación León Marino). Los británicos, con ayuda del radar y pilotos de varios países (incluyendo polacos y checos), lograron resistir.</p>
+                        <p><strong>Fechas:</strong> 10 de julio - 31 de octubre de 1940</p>
+                        <p><strong>Bajas:</strong> RAF: 1,023 aviones | Luftwaffe: 1,887 aviones</p>
+                        <p><strong>Consecuencias:</strong> Alemania pospuso indefinidamente la invasión, primera gran derrota alemana.</p>
+                        <div class="alert alert-info">
+                            <strong>Dato curioso:</strong> Churchill dijo: "Nunca en el campo de los conflictos humanos tantos debieron tanto a tan pocos", refiriéndose a los pilotos.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Batalla 3 -->
+        <div class="card battle-card">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="OPERACION BARBARROJA.JPG" class="card-img" alt="Operación Barbarroja">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="card-title">1941: Operación Barbarroja</h3><a href="https://es.wikipedia.org/wiki/Operaci%C3%B3n_Barbarroja">EL INICIO DE LA GRAN GUERRA PATRIA</a>
+                        <p class="card-text">La invasión alemana de la Unión Soviética fue la mayor operación militar de la historia, con más de 4 millones de soldados del Eje. Aunque inicialmente exitosa, la campaña se estancó ante la resistencia soviética y el crudo invierno ruso.</p>
+                        <p><strong>Fechas:</strong> 22 de junio - 5 de diciembre de 1941</p>
+                        <p><strong>Bajas:</strong> Alemania: 250,000 muertos | URSS: 800,000 muertos, 3 millones de prisioneros</p>
+                        <p><strong>Consecuencias:</strong> Fracaso alemán en tomar Moscú, inicio de la guerra de desgaste en el Este.</p>
+                        <div class="alert alert-info">
+                            <strong>Dato curioso:</strong> Hitler esperaba vencer antes del invierno, pero no preparó equipamiento para el frío.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Batalla 4 -->
+        <div class="card battle-card">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="STALINGRADO.JPG" class="card-img" alt="Batalla de Stalingrado"><a href="https://es.wikipedia.org/wiki/Rattenkrieg">Rattenkrieg</a>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="card-title">1942-1943: Batalla de Stalingrado</h3>
+                        <p class="card-text">Considerada la batalla más sangrienta de la historia, fue un punto de inflexión en la guerra. Los soviéticos rodearon y destruyeron al 6° Ejército alemán, marcando el inicio del retroceso alemán en el Este.</p>
+                        <p><strong>Fechas:</strong> 23 de agosto 1942 - 2 de febrero 1943</p>
+                        <p><strong>Bajas:</strong> Alemania: 300,000 bajas | URSS: 1.1 millones de bajas</p>
+                        <p><strong>Consecuencias:</strong> Primera rendición masiva alemana, cambio de iniciativa en el Este.</p>
+                        <div class="alert alert-info">
+                            <strong>Dato curioso:</strong> Los combates fueron tan intensos que la esperanza de vida de un soldado era de 24 horas.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Batalla 5 -->
+        <div class="card battle-card">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="DIA D.JPG" class="card-img" alt="Día D"><a href="https://es.wikipedia.org/wiki/Batalla_de_Normand%C3%ADa">OPERACION OVERLORD</a>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="card-title">1944: Desembarco de Normandía (Día D)</h3>
+                        <p class="card-text">La Operación Overlord fue la mayor invasión anfibia de la historia, con desembarcos en cinco playas de Normandía (Utah, Omaha, Gold, Juno y Sword). Marcó el inicio de la liberación de Europa occidental.</p>
+                        <p><strong>Fechas:</strong> 6 de junio de 1944</p>
+                        <p><strong>Bajas:</strong> Aliados: 10,000 bajas (4,414 muertos) | Alemania: 4,000-9,000 bajas</p>
+                        <p><strong>Consecuencias:</strong> Establecimiento de cabeza de playa en Francia, inicio de la liberación de Europa.</p>
+                        <div class="alert alert-info">
+                            <strong>Dato curioso:</strong> Se usaron tanques anfibios "DD" que en Omaha Beach naufragaron casi todos.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Batalla 6 -->
+        <div class="card battle-card">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="BATALLA DE BERLIN.JPG" class="card-img" alt="Batalla de Berlín"><a href="https://es.wikipedia.org/wiki/Batalla_de_Berl%C3%ADn">LA ULTIMA BATALLA DE EUROPA</a>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="card-title">1945: Batalla de Berlín</h3>
+                        <p class="card-text">El asalto final soviético a la capital alemana. Combates casa por casa, con Hitler suicidándose el 30 de abril. La rendición alemana se firmó el 8 de mayo de 1945.</p>
+                        <p><strong>Fechas:</strong> 16 de abril - 2 de mayo de 1945</p>
+                        <p><strong>Bajas:</strong> URSS: 81,000 muertos | Alemania: 92,000-100,000 muertos</p>
+                        <p><strong>Consecuencias:</strong> Fin del Tercer Reich, división de Alemania.</p>
+                        <div class="alert alert-info">
+                            <strong>Dato curioso:</strong> Hitler se casó con Eva Braun en su búnker horas antes de suicidarse.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Batalla 7 -->
+        <div class="card battle-card">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="ENOLA GAY.PNG" class="card-img" alt="Bombas atómicas"><a href="https://es.wikipedia.org/wiki/Bombardeos_at%C3%B3micos_de_Hiroshima_y_Nagasaki">Ahora me he convertido en muerte, el destructor de mundos</a>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="card-title">1945: Bombardeos atómicos</h3>
+                        <p class="card-text">Estados Unidos lanzó bombas atómicas sobre Hiroshima (6 de agosto) y Nagasaki (9 de agosto), causando unas 200,000 víctimas y llevando a la rendición de Japón el 15 de agosto.</p>
+                        <p><strong>Fechas:</strong> 6 y 9 de agosto de 1945</p>
+                        <p><strong>Bajas:</strong> Hiroshima: ~140,000 muertos | Nagasaki: ~74,000 muertos</p>
+                        <p><strong>Consecuencias:</strong> Fin de la guerra, inicio de la era nuclear.</p>
+                        <div class="alert alert-info">
+                            <strong>Dato curioso:</strong> El piloto Paul Tibbets nombró al avión "Enola Gay" en honor a su madre.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr size="2" color="#333" width="80%">
+
+        <!-- Video -->
+        <center>
+            <h2><font color="#333">Documental: La Segunda Guerra Mundial</font></h2>
+            <div style="background-color: #000; padding: 10px; border-radius: 10px; max-width: 800px; margin: 0 auto;">
+                <video width="100%" controls>
+                    <source src="La Segunda Guerra Mundial.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+        </center>
+
+        <hr size="2" color="#333" width="80%">
+
+        <center>
+            <p><a href="index.html" class="btn btn-primary">Volver al inicio</a></p>
+        </center>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <footer style="text-align: center; padding: 10px; background-color: #333; color: white; position: fixed; width: 100%; bottom: 0;">
+        <p>&copy; 2025 Información sobre la Segunda Guerra Mundial</p>
+    </footer>
+</body>
+</html>
